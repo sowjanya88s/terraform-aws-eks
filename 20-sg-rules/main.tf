@@ -91,7 +91,7 @@ resource "aws_security_group_rule" "mysql_eks_node" {
 }
 
 # openvpn
-resource "aws_security_group_rule" "openvpn_public" {
+resource "aws_security_group_rule" "openvpn_public_443" {
   type              = "ingress"
   from_port         = 443
   to_port           = 443

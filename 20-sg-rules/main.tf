@@ -108,7 +108,7 @@ resource "aws_security_group_rule" "ingress_alb_public" {
   protocol          = "tcp"
   # Where traffic is coming from
   cidr_blocks = ["0.0.0.0/0"]
-  security_group_id = local.openvpn_sg_id
+  security_group_id = local.ingress_alb_sg_id
 }
 
 # Admin UI

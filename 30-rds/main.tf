@@ -19,7 +19,7 @@ module "db" {
 
 
   tags = merge(
-    var.common_tags,
+    local.common_tags,
     {
         Name = "${var.project}-${var.environment}-mysql"
     }

@@ -40,7 +40,7 @@ module "eks" {
       instance_types = ["m5.xlarge"]
       iam_role_additional_policies = {
      amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
-     amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
+     amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
   }
 
 

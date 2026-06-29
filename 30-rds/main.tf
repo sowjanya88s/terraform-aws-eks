@@ -28,7 +28,7 @@ module "db" {
 
   # DB subnet group
   create_db_subnet_group = false
-  db_subnet_group_name  = var.subnet_group_ids
+  db_subnet_group_name  = var.database_subnet_group_name
 
   # DB parameter group
   family = "mysql8.0"

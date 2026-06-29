@@ -74,8 +74,8 @@ resource "aws_security_group_rule" "rabbitmq_eks_node" {
 #mysql
 resource "aws_security_group_rule" "mysql_bastion" {
   type              = "ingress"
-  from_port         = 22
-  to_port           = 22
+  from_port         = 3306
+  to_port           = 3306
   protocol          = "tcp"
   source_security_group_id = local.bastion_sg_id
   security_group_id = local.mysql_sg_id

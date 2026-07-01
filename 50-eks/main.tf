@@ -36,7 +36,9 @@ module "eks" {
     blue = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2023_x86_64_STANDARD"
-      instance_types = ["t3.micro"]  # use this for free-tier
+      instance_types = ["c5.large", "c5a.large", "c5d.large", "c5n.large", "m5.large", "m5a.large"]
+      capacity_type  = "SPOT"
+      # instance_types = ["t3.micro"]  # use this for free-tier
       iam_role_additional_policies = {
      amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
      amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"

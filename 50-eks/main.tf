@@ -13,7 +13,7 @@ module "eks" {
     vpc-cni                = {
       before_compute = true
     }
-    metrics-server = {}
+   # metrics-server = {}
   }
 
   # Optional
@@ -36,7 +36,7 @@ module "eks" {
     blue = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2023_x86_64_STANDARD"
-      instance_types = ["t3.micro"]
+      instance_types = ["t3.micro"]  # use this for free-tier
       iam_role_additional_policies = {
      amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
      amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"

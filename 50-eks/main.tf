@@ -14,6 +14,7 @@ module "eks" {
       before_compute = true
     }
    # metrics-server = {}
+    aws-ebs-csi-driver = {}
   }
 
   # Optional
